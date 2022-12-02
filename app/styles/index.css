@@ -1,0 +1,412 @@
+
+
+@import 'remixicon/fonts/remixicon.css';
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&family=Pathway+Gothic+One&display=swap');
+
+
+/* --------------------------------------- General */
+body{
+  /* font-family: 'Fjalla One', sans-serif; */
+  font-family: 'Pathway Gothic One', sans-serif;
+  margin:  .5rem 0 0 0;
+}
+
+:root{
+    --color-primary: #231942;
+    --color-secundary: #5e548e;
+    --color-tertiary: #9f86c0;
+    --color-quaternary: #be95c4;
+    --color-quinary: #e0b1cb;
+}
+
+
+/* ----------------------------------- Navegador */
+.nav_container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    padding: .7rem 0;
+    box-shadow: 1px .1px 3px #808080;
+    width: 100%;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1rem;
+}
+.nav_logo{
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+.nav_logo img{
+    height: 1.8rem;
+}
+.nav_contacMe---menu{
+    display: flex;
+    align-items: center;
+}
+.nav_contactMe_btn{
+    padding: 0 1rem;
+    font-size: 1.5rem;
+}
+@media(min-width: 768px){
+    .nav_contactMe_btn{
+        /* display: none; */
+        margin-right: 33rem;
+    }    
+}
+.nav_menu_menuBtn{
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: .5rem;
+}
+.nav_menu_menuBtn{
+    
+    margin-top: .5rem;
+}
+@media(min-width: 768px){
+    .nav_menu_menuBtn{
+        display: none;
+    }    
+}
+.nav_menu_cuadro{
+    position: fixed;
+    width: 70%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    padding: 4rem 0 0 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2px 0 4px hsla(152, 24%, 15%, .1);
+    transition: .3s;
+    background-color: white;
+}
+@media(min-width: 768px){
+    .nav_menu_cuadro{
+        margin-top: -.3rem;
+        right: 0;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        height: .5rem;
+        box-shadow: 0 0 hsla(152, 24%, 15%, .1);
+        padding: 1rem 0;
+        margin-right: 2rem;
+    }    
+}
+.nav_menu_cuadro_close_btn{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+@media(min-width: 768px){
+    .nav_menu_cuadro_close_btn{
+        display: none;
+    }   
+}
+.nav_menu_cuadro_links{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+@media(min-width: 768px){
+    .nav_menu_cuadro_links{
+        flex-direction: row;
+        margin-top: 0;
+    }     
+}
+.nav_menu_cuadro_links a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1.5rem;    
+    padding: 0 1rem;
+    height: 2rem;
+    border: 1px solid white;
+    border-radius: 2rem;
+}
+@media(min-width: 768px){
+    .nav_menu_cuadro_links a:hover{
+        border: 1px solid black;
+    }    
+}
+/* ----------------- */
+.show_menu{
+    right: 0;
+}
+.close_menu{
+    right: -100%;
+}
+
+
+/* ----------------------------------- Header */
+
+.header{
+    margin: 6rem 1rem 0 1rem;
+}
+.header_Image{
+    margin: 3rem 0;
+    border-radius: .5rem;
+    height: 40rem;
+    background-image: url("~/../public/images/header01.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* ----------------------------------- latestProjects */
+.latestProjects_projects{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+@media(min-width: 768px){
+    .latestProjects_projects{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(min-width: 1024px){
+    .latestProjects_projects{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.latestProjects_projects_project{
+    margin-top: 4rem;
+    border-left: 1px solid var(--color-primary);
+    padding: 0 1rem;
+}
+.latestProjects_projects_project_title{
+    display: inline-block;
+    margin: .5rem 0;
+    font-size: 2.5rem;
+    /* border-bottom: 2px solid black; */
+    color: var(--color-primary);
+}
+.latestProjects_projects_project_description{
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+.latestProjects_projects_project_technologies{
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+.latestProjects_projects_project_technologies span{
+    font-size: 2rem;
+    font-weight: 900;
+}
+.latestProjects_projects_project_image{
+    margin: 3rem 0;
+    max-height: 20rem;
+}
+.latestProjects_projects_project_image img{
+    max-width: 20rem;
+    border-radius: .7rem;
+}
+.latestProjects_projects_project_btnViewProject{
+    background-color: var(--color-primary);
+    color: white;
+    padding: .5rem 0;
+    border-radius: .4rem;
+    width: 8rem;
+    display: flex;
+    justify-content: center;
+    column-gap: .5rem;
+    cursor: pointer;
+}
+.latestProjects_projects_project_btnViewProject:hover{
+    transition: .3s;
+    background-color: var(--color-secundary);
+    column-gap: 1rem;
+}   
+.latestProjects_projects_project_btnViewProject a{
+    text-decoration: none;
+    color: white;
+    margin: auto 0;
+}
+.latestProjects_projects_project_btnViewProject i{
+    margin-left: rem;
+    font-size: 1.3rem;
+}
+/* ----------------------------------- Skins */
+.skins_Logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0 0 0;
+    gap: 3rem;
+}
+.skins_Logo_Programming{
+    text-align: center;
+}
+.skins_Logo_Programming img{
+    height: 3rem;
+    margin: 0 1.5rem 1rem 0;
+}
+.skins_Logo_Programming_Tools img{
+    height: 3rem;
+    margin-right: 1.5rem;
+}
+.skins_Logo_Tools img{
+    height: 3rem;
+    margin-right: 1.5rem;
+}
+
+/* ----------------------------------- Contact */
+.contact_Btn{
+    font-size: 3rem;
+    padding: .4rem 3rem;
+    display: block;
+    margin: 4rem auto;
+    width: 14rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact_SocialMedia{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem 0;
+}
+.contact_SocialMedia{
+
+}
+/* ----------------------------------- Footer */
+.footer{
+    background-color: black;
+    color: white;
+    margin: 4rem 0 0 0;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------- Titles */
+.title{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 7rem;
+    letter-spacing: -.3rem;
+    margin: 0 0 -2.5rem 0 ;
+    color: var(--color-primary);
+}
+.title_center{
+    text-align: center;
+}
+.title_header{
+    text-align: center;
+}
+.title_separate{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    max-width: 25rem;
+    margin: 0 auto;
+}
+.title_separateLeft{
+    align-items: flex-start;
+}
+.title_separateRight{
+    align-items: flex-end;
+}
+  
+/* --------------------------------------- Paragraph */
+.paragraph_center{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin: 0;
+}
+  
+/* --------------------------------------- Images */
+.image_header{
+    width: 100%;
+    max-width: 23rem;
+    height: 35rem;
+    border-radius: .7rem;
+}
+@media(min-width: 768px){
+    .image_header{
+        background-position: center;
+        background-size: cover;
+        max-width: 70rem;
+    }
+}
+
+/* --------------------------------------- Icons */
+
+.icon_socialMedia{
+    font-size: 2rem;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+  /* --------------------------------------- Botons */
+.btn_contactMe{
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 2rem;
+    text-transform: uppercase;
+}
+.btn_contactMe:hover{
+    background-color: var(--color-primary);
+    color: white;
+}
+/* --------------------------------------- Enlaces */
+
+/* --------------------------------------- Others */
+  
+.logo{
+    font-weight: 700;
+    letter-spacing: .07rem;
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+  
+  
+.sectionSeparate{
+    margin: 5rem 1rem 1rem 1rem;
+    border-top: 2px solid black;
+}
+@media(min-width: 1024px){
+    .sectionSeparate{
+        margin: 10rem 1rem 1rem 1rem;
+    }
+}
+.link{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1124px;
+    margin: 0 auto;
+}
